@@ -7,55 +7,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
     <style>
         :root { --blue: #1a365d; --gold: #c5a059; }
-        body { font-family: 'Open Sans', sans-serif; margin: 0; color: #333; scroll-behavior: smooth; }
+        body { font-family: 'Open Sans', sans-serif; margin: 0; color: #333; scroll-behavior: smooth; overflow-x: hidden; }
         
-        header { background: white; padding: 20px 0; box-shadow: 0 2px 15px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+        header { background: white; padding: 15px 0; box-shadow: 0 2px 15px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
         nav { max-width: 1300px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
         
-        .logo-box { display: flex; align-items: center; gap: 20px; text-decoration: none; }
-        
-        /* Set logo height - adjusts automatically with text */
+        .logo-box { display: flex; align-items: center; gap: 15px; text-decoration: none; }
         .logo-img { height: 90px; width: auto; display: block; }
+        .logo-text { font-weight: 800; font-size: 3.5rem; color: var(--blue); text-transform: uppercase; line-height: 1; }
         
-        /* Extra large CSCSC text */
-        .logo-text { 
-            font-weight: 800; 
-            font-size: 3.2rem; 
-            color: var(--blue); 
-            text-transform: uppercase; 
-            line-height: 1;
-            letter-spacing: -1px;
-        }
-        
-        .nav-links { list-style: none; display: flex; gap: 25px; margin: 0; padding: 0; }
-        .nav-links a { text-decoration: none; color: #333; font-weight: 700; font-size: 1.1rem; transition: 0.3s; }
-        .nav-links a:hover { color: var(--gold); }
+        .nav-links { list-style: none; display: flex; gap: 25px; }
+        .nav-links a { text-decoration: none; color: #333; font-weight: 700; }
 
         .hero { 
-            background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), 
-                        url('https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=1600&q=80'); 
-            background-size: cover; 
-            background-position: center 40%; 
-            height: 70vh; 
-            display: flex; 
-            flex-direction: column; 
-            justify-content: center; 
-            align-items: center; 
-            color: white; 
-            text-align: center;
+            /* Swapped to a new link to force a refresh */
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                        url('https://images.unsplash.com/photo-1598133894008-61f7fdb8cc3a?q=80&w=1600&auto=format&fit=crop'); 
+            background-size: cover; background-position: center 35%; height: 70vh; 
+            display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center;
         }
 
-        .hero h1 { font-size: 4.5rem; margin: 0; text-shadow: 3px 3px 15px rgba(0,0,0,0.6); }
-        .hero p { font-size: 1.8rem; font-weight: 300; margin-top: 10px; }
-
-        .container { max-width: 1100px; margin: 80px auto; padding: 0 20px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
-        .card { padding: 45px; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.07); border-top: 6px solid var(--gold); background: white; transition: 0.3s; }
-        .card:hover { transform: translateY(-10px); }
+        .container { max-width: 1100px; margin: 60px auto; padding: 0 20px; text-align: center; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .card { padding: 40px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 6px solid var(--gold); background: white; }
         
-        h2.section-title { text-align: center; color: var(--blue); font-size: 3rem; margin-bottom: 50px; font-weight: 800; }
-        
-        footer { background: var(--blue); color: white; text-align: center; padding: 60px 0; margin-top: 80px; }
+        footer { background: var(--blue); color: white; text-align: center; padding: 50px 0; }
     </style>
 </head>
 <body>
@@ -76,31 +52,21 @@
     </header>
 
     <section class="hero">
-        <h1>Cocker Spaniel Club</h1>
-        <p>Southern California • Founded 1930</p>
+        <h1 style="font-size: 4.5rem; margin: 0;">Cocker Spaniel Club</h1>
+        <p style="font-size: 1.8rem;">Southern California • Founded 1930</p>
     </section>
 
     <div class="container">
-        <h2 class="section-title">Club Membership & Care</h2>
+        <h2 style="font-size: 2.5rem; color: var(--blue);">Preserving the Breed</h2>
         <div class="grid">
-            <div class="card" id="about">
-                <h3 style="color: var(--blue); font-size: 1.8rem;">About the Breed</h3>
-                <p>We advocate for the "Merry" Cocker Spaniel, focusing on temperament, health, and breed standards.</p>
-            </div>
-            <div class="card" id="events">
-                <h3 style="color: var(--blue); font-size: 1.8rem;">Upcoming Events</h3>
-                <p>Stay updated on our specialty shows, club meetings, and community gatherings throughout the year.</p>
-            </div>
-            <div class="card" id="health">
-                <h3 style="color: var(--blue); font-size: 1.8rem;">Health Clinics</h3>
-                <p>Organizing K9 Health Clinics in Temecula, CA to facilitate specialized health screenings for our dogs.</p>
-            </div>
+            <div class="card" id="about"><h3>About the Breed</h3><p>Information on the temperament and care of Cocker Spaniels.</p></div>
+            <div class="card" id="events"><h3>Upcoming Events</h3><p>Shows and meetings for club members.</p></div>
+            <div class="card" id="health"><h3>Health Clinics</h3><p>Specialized clinics held in Temecula, CA.</p></div>
         </div>
     </div>
 
-    <footer id="contact">
-        <p style="font-size: 1.2rem; font-weight: 700;">&copy; 2026 Cocker Spaniel Club of Southern California</p>
-        <p style="opacity: 0.7; margin-top: 10px;">Promoting responsible ownership and breeding excellence.</p>
+    <footer>
+        <p>&copy; 2026 Cocker Spaniel Club of Southern California</p>
     </footer>
 </body>
 </html>
