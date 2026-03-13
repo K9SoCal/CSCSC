@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocker Spaniel Club of Southern California</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --blue: #1a365d; --gold: #c5a059; }
+        body { font-family: 'Open Sans', sans-serif; margin: 0; color: #333; scroll-behavior: smooth; }
+        
+        header { background: white; padding: 15px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        nav { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+        
+        /* THE LOGO & TEXT */
+        .logo-box { display: flex; align-items: center; gap: 20px; text-decoration: none; }
+        .logo-img { height: 100px; width: auto; display: block; border: 1px solid #eee; }
+        .logo-text { font-weight: 800; font-size: 4rem; color: var(--blue); text-transform: uppercase; line-height: 1; letter-spacing: -2px; }
+        
+        .nav-links { list-style: none; display: flex; gap: 25px; margin: 0; padding: 0; }
+        .nav-links a { text-decoration: none; color: #333; font-weight: 700; font-size: 1.1rem; }
+
+        .hero { 
+            /* High-Res Buff Cocker Spaniel - Forced Refresh with ?v=2 */
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                        url('https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=1600&auto=format&fit=crop&v=2'); 
+            background-size: cover; background-position: center 40%; height: 75vh; 
+            display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center;
+        }
+
+        .hero h1 { font-size: 5rem; margin: 0; text-shadow: 3px 3px 20px rgba(0,0,0,0.7); }
+        .hero p { font-size: 2rem; font-weight: 300; }
+
+        .container { max-width: 1100px; margin: 80px auto; padding: 0 20px; text-align: center; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 50px; }
+        .card { padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 8px solid var(--gold); background: white; }
+        
+        footer { background: var(--blue); color: white; text-align: center; padding: 60px 0; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo-box">
+                <img src="logo.jpg" alt="Logo" class="logo-img">
+                <span class="logo-text">CSCSC</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#health">Health</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Cocker Spaniel Club</h1>
+        <p>Southern California • Founded 1930</p>
+    </section>
+
+    <div class="container">
+        <h2 style="font-size: 3rem; color: var(--blue); font-weight: 800;">Preserving the "Merry" Cocker</h2>
+        <div class="grid">
+            <div class="card" id="about"><h3>About the Breed</h3><p>Standards, temperament, and care.</p></div>
+            <div class="card" id="events"><h3>Upcoming Events</h3><p>Shows and meetings in SoCal.</p></div>
+            <div class="card" id="health"><h3>Health Clinics</h3><p>Specialized clinics in Temecula, CA.</p></div>
+        </div>
+    </div>
+
+    <footer>
+        <p style="font-size: 1.4rem; font-weight: 700;">Cocker Spaniel Club of Southern California</p>
+        <p style="opacity: 0.6;">Secretary: Colleen Tkach</p>
+    </footer>
+</body>
+</html>
