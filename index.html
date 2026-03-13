@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cocker Spaniel Club of Southern California</title>
+    
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
     <style>
         :root {
             --primary-blue: #1a365d;
@@ -19,20 +21,21 @@
             padding: 0;
             line-height: 1.6;
             color: var(--text-dark);
+            scroll-behavior: smooth;
         }
 
         /* Navigation */
         header {
             background-color: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            padding: 1rem 0;
+            box-shadow: 0 2px-10px rgba(0,0,0,0.1);
+            padding: 10px 0;
             position: sticky;
             top: 0;
             z-index: 1000;
         }
 
         nav {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
@@ -40,11 +43,25 @@
             padding: 0 20px;
         }
 
-        .logo {
+        /* Logo and Title Styling */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+        }
+
+        .nav-logo {
+            height: 70px; /* Adjust this based on your preference */
+            width: auto;
+        }
+
+        .logo-text {
             font-weight: 700;
-            font-size: 1.2rem;
+            font-size: 2.2rem; /* Larger text as requested */
             color: var(--primary-blue);
             text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .nav-links {
@@ -59,6 +76,7 @@
             text-decoration: none;
             color: var(--text-dark);
             font-weight: 600;
+            font-size: 0.95rem;
             transition: color 0.3s;
         }
 
@@ -68,11 +86,11 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(26, 54, 93, 0.8), rgba(26, 54, 93, 0.8)), 
-                        url('https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=1350&q=80'); /* Placeholder image of a dog */
+            background: linear-gradient(rgba(26, 54, 93, 0.6), rgba(26, 54, 93, 0.6)), 
+                        url('https://images.unsplash.com/photo-1601758124277-f0084ed6703f?auto=format&fit=crop&w=1600&q=80'); 
             background-size: cover;
-            background-position: center;
-            height: 60vh;
+            background-position: center 30%;
+            height: 65vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -83,47 +101,87 @@
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
         .hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
+            font-size: 1.3rem;
+            max-width: 800px;
+            font-weight: 300;
         }
 
-        /* Main Content Areas */
+        /* Content Sections */
         .container {
             max-width: 1100px;
-            margin: 50px auto;
+            margin: 60px auto;
             padding: 0 20px;
         }
 
         .section-title {
             text-align: center;
             color: var(--primary-blue);
-            margin-bottom: 40px;
+            margin-bottom: 50px;
+            font-size: 2.5rem;
         }
 
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            gap: 40px;
         }
 
         .card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 5px solid var(--accent-gold);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: var(--primary-blue);
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+
+        /* Contact Section */
+        #contact {
             background: var(--light-gray);
-            padding: 30px;
-            border-radius: 8px;
-            border-top: 4px solid var(--accent-gold);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .contact-info {
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         footer {
             background: var(--primary-blue);
             color: white;
             text-align: center;
-            padding: 40px 0;
-            margin-top: 50px;
+            padding: 50px 0;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .logo-text {
+                font-size: 1.8rem;
+            }
         }
     </style>
 </head>
@@ -131,7 +189,10 @@
 
     <header>
         <nav>
-            <div class="logo">CSCSC</div>
+            <a href="#home" class="logo-container">
+                <img src="logo.jpg" alt="CSCSC Logo" class="nav-logo">
+                <span class="logo-text">CSCSC</span>
+            </a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About the Breed</a></li>
@@ -144,40 +205,41 @@
 
     <section class="hero" id="home">
         <h1>Cocker Spaniel Club of Southern California</h1>
-        <p>Dedicated to the preservation, health, and welfare of the Cocker Spaniel.</p>
+        <p>Preserving the "Merry" Cocker Spaniel since 1930.</p>
     </section>
 
     <div class="container">
-        <h2 class="section-title">Welcome to our Community</h2>
+        <h2 class="section-title">Welcome to the Club</h2>
         
         <div class="grid">
             <div class="card" id="about">
                 <h3>About the Breed</h3>
-                <p>Learn about the history, temperament, and care requirements of the merry and energetic Cocker Spaniel.</p>
+                <p>The Cocker Spaniel is known for its gentle temperament and beautiful coat. We provide resources to help owners understand the specific needs of this beloved breed.</p>
             </div>
 
             <div class="card" id="events">
                 <h3>Upcoming Events</h3>
-                <p>Stay updated on our specialty shows, meetings, and social gatherings across Southern California.</p>
+                <p>From specialty shows to social gatherings, we host a variety of events throughout Southern California. Check back regularly for our updated calendar.</p>
             </div>
 
             <div class="card" id="health">
                 <h3>Health Clinics</h3>
-                <p>We provide resources and organized clinics to check for breed-specific health concerns and promote longevity.</p>
+                <p>We host regular K9 Health Clinics in Temecula, CA, to help owners maintain the well-being of their dogs through specialized screenings.</p>
             </div>
         </div>
     </div>
 
-    <section id="contact" style="background: #f1f1f1; padding: 60px 0;">
-        <div class="container" style="text-align: center;">
-            <h2>Contact Us</h2>
-            <p>Have questions about the club or the breed? We'd love to hear from you.</p>
+    <section id="contact">
+        <div class="contact-info">
+            <h2 class="section-title" style="margin-bottom: 20px;">Contact Us</h2>
+            <p>Have questions about membership or our upcoming clinics? Reach out to the club today.</p>
             <p><strong>Email:</strong> info@cscsc.example.com</p>
         </div>
     </section>
 
     <footer>
         <p>&copy; 2026 Cocker Spaniel Club of Southern California. All rights reserved.</p>
+        <p style="font-size: 0.8rem; opacity: 0.7;">Founded 1930</p>
     </footer>
 
 </body>
