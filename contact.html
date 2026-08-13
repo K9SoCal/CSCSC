@@ -89,7 +89,9 @@
 
                 <!-- Right: form -->
                 <div class="contact-form">
-                    <form id="contact-form" novalidate>
+                    <!-- EDITABLE: Replace YOUR_FORM_ID with your Formspree form ID (https://formspree.io)
+                     or swap the action for any other form-handling service you prefer. -->
+                <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
                         <div class="form-group">
                             <input type="text" id="name" placeholder="Your Name" required>
                         </div>
@@ -178,11 +180,33 @@
         mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('open'));
 
         // Contact form submission
+        // If a real Formspree (or other) action is set on the form, the fetch below
+        // will deliver the message. Replace YOUR_FORM_ID in the action attribute first.
         const form = document.getElementById('contact-form');
         const toast = document.getElementById('toast');
 
-        form.addEventListener('submit', (e) => {
+        form.addEventListener('submit', async (e) => {
             e.preventDefault();
+            const action = form.getAttribute('action');
+            const hasRealEndpoint = action && !action.includes('YOUR_FORM_ID');
+
+            if (hasRealEndpoint) {
+                try {
+                    const response = await fetch(action, {
+                        method: 'POST',
+                        body: new FormData(form),
+                        headers: { 'Accept': 'application/json' }
+                    });
+                    if (!response.ok) {
+                        alert('There was a problem sending your message. Please try again or email us directly at info@cscsc.org.');
+                        return;
+                    }
+                } catch (_) {
+                    alert('There was a problem sending your message. Please email us directly at info@cscsc.org.');
+                    return;
+                }
+            }
+
             toast.classList.add('show');
             setTimeout(() => toast.classList.remove('show'), 4000);
             form.reset();

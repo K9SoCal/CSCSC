@@ -203,9 +203,8 @@ a { text-decoration: none; color: inherit; }
 
 @media (min-width: 640px)  { .cards-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 1024px) { .cards-grid { grid-template-columns: repeat(3, 1fr); } }
-@media (min-width: 1024px) { .cards-grid-2 { grid-template-columns: repeat(2, 1fr); } }
 .cards-grid-2 { display: grid; gap: 1.5rem; }
-@media (min-width: 640px) { .cards-grid-2 { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 768px) { .cards-grid-2 { grid-template-columns: repeat(2, 1fr); } }
 
 .card {
   background: var(--color-white);
