@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In Memoriam – CSCSC</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Memorial-specific styles */
+        .memorial-intro {
+            max-width: 46rem;
+            margin: 0 auto;
+            text-align: center;
+            padding: 0 1.5rem 3rem;
+            color: var(--color-stone-500);
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .memorial-section-label {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .memorial-section-label h2 {
+            font-size: 1.75rem;
+            color: var(--color-stone-800);
+            white-space: nowrap;
+        }
+
+        .memorial-section-label::after {
+            content: '';
+            display: block;
+            flex: 1;
+            height: 1px;
+            background: var(--color-stone-200);
+        }
+
+        /* Tribute card */
+        .tribute-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 640px)  { .tribute-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (min-width: 1024px) { .tribute-grid { grid-template-columns: repeat(3, 1fr); } }
+
+        .tribute-card {
+            background: var(--color-white);
+            border: 1px solid var(--color-stone-100);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .tribute-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+
+        .tribute-card .photo-circle {
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+            background: var(--color-stone-100);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            overflow: hidden;
+            border: 3px solid var(--color-stone-200);
+        }
+
+        .tribute-card .photo-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .tribute-card .photo-circle i {
+            font-size: 2rem;
+            color: var(--color-stone-400);
+        }
+
+        .tribute-card h3 {
+            font-size: 1.15rem;
+            color: var(--color-stone-800);
+            text-align: center;
+            margin-bottom: .25rem;
+        }
+
+        .tribute-card .years {
+            text-align: center;
+            font-size: .8rem;
+            color: var(--color-stone-400);
+            margin-bottom: 1rem;
+            letter-spacing: .05em;
+        }
+
+        .tribute-card .tribute-text {
+            font-size: .9rem;
+            color: var(--color-stone-500);
+            line-height: 1.7;
+            text-align: center;
+        }
+
+        /* Add-tribute CTA */
+        .add-tribute {
+            border: 2px dashed var(--color-stone-200);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: .75rem;
+            color: var(--color-stone-400);
+            text-align: center;
+            transition: var(--transition);
+            background: transparent;
+        }
+
+        .add-tribute:hover {
+            border-color: var(--color-amber-700);
+            color: var(--color-amber-700);
+            transform: translateY(-4px);
+        }
+
+        .add-tribute i { font-size: 1.5rem; }
+        .add-tribute span { font-size: .9rem; font-weight: 600; }
+
+        /* Candle / flame divider */
+        .flame-divider {
+            text-align: center;
+            color: var(--color-amber-700);
+            font-size: 1.5rem;
+            margin: 3rem 0 2rem;
+            opacity: .6;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="logo.jpg" alt="" class="bg-watermark" aria-hidden="true">
+
+    <!-- Navigation -->
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-brand">
+                <img src="logo.jpg" alt="CSCSC Logo">
+                <div class="nav-brand-text">
+                    <span>CSCSC</span>
+                    <span>Since 1930</span>
+                </div>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About the Breed</a>
+                <a href="health.html">Health Clinics</a>
+                <a href="events.html">Events</a>
+                <a href="memorial.html" class="active">In Memoriam</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <button class="nav-mobile-btn" id="mobile-btn" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div class="nav-mobile-menu" id="mobile-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About the Breed</a>
+            <a href="health.html">Health Clinics</a>
+            <a href="events.html">Events</a>
+            <a href="memorial.html">In Memoriam</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <p class="eyebrow"><i class="fas fa-candle-holder" style="margin-right:.4rem;"></i> Honoring Those We've Lost</p>
+        <h1>In Memoriam</h1>
+        <p>A place to remember and celebrate the beloved people and dogs who made our club — and our hearts — so much richer.</p>
+    </header>
+
+    <!-- Intro quote -->
+    <div class="memorial-intro">
+        <i class="fas fa-paw" style="color:var(--color-stone-300);font-size:1.75rem;display:block;margin-bottom:1rem;"></i>
+        <p style="font-style:italic;color:var(--color-stone-400);">
+            "If love could have saved you, you would have lived forever."
+        </p>
+    </div>
+
+    <!-- People We've Lost -->
+    <section class="section bg-white-60" style="padding-top:2rem;">
+        <div class="section-inner">
+
+            <div class="memorial-section-label">
+                <h2><i class="fas fa-user" style="color:var(--color-amber-700);font-size:1.2rem;margin-right:.6rem;"></i> People We Miss</h2>
+            </div>
+
+            <div class="tribute-grid">
+
+                <!-- EDITABLE: Replace with real names, dates, and tributes.
+                     To add a photo, replace the <i> tag inside .photo-circle with:
+                     <img src="your-photo.jpg" alt="Person's name"> -->
+
+                <div class="tribute-card">
+                    <div class="photo-circle"><i class="fas fa-user"></i></div>
+                    <h3>[ Member Name ]</h3>
+                    <p class="years"><!-- e.g. 1940 – 2022 --></p>
+                    <p class="tribute-text"><!-- Add a short tribute or fond memory here. --></p>
+                </div>
+
+                <div class="tribute-card">
+                    <div class="photo-circle"><i class="fas fa-user"></i></div>
+                    <h3>[ Member Name ]</h3>
+                    <p class="years"></p>
+                    <p class="tribute-text"><!-- Add a short tribute or fond memory here. --></p>
+                </div>
+
+                <!-- EDITABLE: Add more people by duplicating the tribute-card block above -->
+
+                <!-- "Submit a tribute" placeholder -->
+                <a href="contact.html" class="add-tribute">
+                    <i class="fas fa-plus-circle"></i>
+                    <span>Add a Tribute</span>
+                    <p style="font-size:.8rem;font-weight:400;">Contact us to submit a memorial for a person we've lost.</p>
+                </a>
+
+            </div>
+
+            <div class="flame-divider">
+                <i class="fas fa-fire-alt"></i>
+                &nbsp;&nbsp;&nbsp;
+                <i class="fas fa-paw"></i>
+                &nbsp;&nbsp;&nbsp;
+                <i class="fas fa-fire-alt"></i>
+            </div>
+
+            <!-- Dogs We've Lost -->
+            <div class="memorial-section-label" style="margin-top:1rem;">
+                <h2><i class="fas fa-dog" style="color:var(--color-amber-700);font-size:1.2rem;margin-right:.6rem;"></i> Dogs We Miss</h2>
+            </div>
+
+            <div class="tribute-grid">
+
+                <!-- EDITABLE: Replace with real dog names, dates, and tributes.
+                     To add a photo, replace the <i> tag inside .photo-circle with:
+                     <img src="your-dog-photo.jpg" alt="Dog's name"> -->
+
+                <div class="tribute-card">
+                    <div class="photo-circle"><i class="fas fa-dog"></i></div>
+                    <h3>[ Dog's Call Name ]</h3>
+                    <p class="years"><!-- e.g. 2010 – 2022 &bull; Ch. Registered Name --></p>
+                    <p class="tribute-text"><!-- Add a short tribute. What made this dog special? What titles did they earn? --></p>
+                </div>
+
+                <div class="tribute-card">
+                    <div class="photo-circle"><i class="fas fa-dog"></i></div>
+                    <h3>[ Dog's Call Name ]</h3>
+                    <p class="years"></p>
+                    <p class="tribute-text"><!-- Add a short tribute here. --></p>
+                </div>
+
+                <div class="tribute-card">
+                    <div class="photo-circle"><i class="fas fa-dog"></i></div>
+                    <h3>[ Dog's Call Name ]</h3>
+                    <p class="years"></p>
+                    <p class="tribute-text"><!-- Add a short tribute here. --></p>
+                </div>
+
+                <!-- EDITABLE: Add more dogs by duplicating the tribute-card block above -->
+
+                <!-- "Submit a tribute" placeholder -->
+                <a href="contact.html" class="add-tribute">
+                    <i class="fas fa-plus-circle"></i>
+                    <span>Add a Tribute</span>
+                    <p style="font-size:.8rem;font-weight:400;">Contact us to submit a memorial for a dog we've lost.</p>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="section">
+        <div class="section-inner">
+            <div class="dark-banner">
+                <div>
+                    <h4>Want to submit a memorial?</h4>
+                    <p>Send us a name, dates, photo, and a short tribute — we'll add them to this page with care.</p>
+                </div>
+                <a href="contact.html" class="btn btn-amber">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <img src="logo.jpg" alt="CSCSC Logo">
+        <div class="footer-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Dog Shows"><i class="fas fa-dog"></i></a>
+        </div>
+        <p class="footer-copy">© 2024 Cocker Spaniel Club of Southern California. Founded 1930.</p>
+    </footer>
+
+    <script>
+        const mobileBtn = document.getElementById('mobile-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+    </script>
+</body>
+</html>
