@@ -1,1 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us – CSCSC</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
 
+    <img src="logo.jpg" alt="" class="bg-watermark" aria-hidden="true">
+
+    <!-- Navigation -->
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-brand">
+                <img src="logo.jpg" alt="CSCSC Logo">
+                <div class="nav-brand-text">
+                    <span>CSCSC</span>
+                    <span>Since 1930</span>
+                </div>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About the Breed</a>
+                <a href="health.html">Health Clinics</a>
+                <a href="events.html">Events</a>
+                <a href="memorial.html">In Memoriam</a>
+                <a href="contact.html" class="active">Contact Us</a>
+            </div>
+            <button class="nav-mobile-btn" id="mobile-btn" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div class="nav-mobile-menu" id="mobile-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About the Breed</a>
+            <a href="health.html">Health Clinics</a>
+            <a href="events.html">Events</a>
+            <a href="memorial.html">In Memoriam</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <p class="eyebrow">We'd love to hear from you</p>
+        <h1>Contact Us</h1>
+        <p>Questions about membership, breeders, events, or health clinics? Our officers are happy to help.</p>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="section bg-dark" style="padding-top:4rem;padding-bottom:5rem;">
+        <div class="section-inner">
+            <div class="contact-grid">
+                <!-- Left: info -->
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <p>Interested in joining the club or finding a reputable breeder? Our officers are here to assist with any questions about the Cocker Spaniel Club of Southern California.</p>
+
+                    <div class="contact-item">
+                        <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+                        <!-- EDITABLE: Replace with your real email -->
+                        <span>info@cscsc.org</span>
+                    </div>
+                    <div class="contact-item">
+                        <div class="ci-icon"><i class="fas fa-map-pin"></i></div>
+                        <span>Southern California, USA</span>
+                    </div>
+                    <!-- EDITABLE: Add phone number if desired
+                    <div class="contact-item">
+                        <div class="ci-icon"><i class="fas fa-phone"></i></div>
+                        <span>(xxx) xxx-xxxx</span>
+                    </div>
+                    -->
+
+                    <div style="margin-top:2.5rem;">
+                        <p style="color:var(--color-stone-400);font-size:.875rem;margin-bottom:1rem;text-transform:uppercase;letter-spacing:.1em;">Follow the Club</p>
+                        <div style="display:flex;gap:1rem;">
+                            <!-- EDITABLE: Replace # with your real social links -->
+                            <a href="#" style="color:var(--color-stone-400);font-size:1.25rem;transition:var(--transition);"
+                               onmouseover="this.style.color='var(--color-amber-500)'" onmouseout="this.style.color='var(--color-stone-400)'"
+                               aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" style="color:var(--color-stone-400);font-size:1.25rem;transition:var(--transition);"
+                               onmouseover="this.style.color='var(--color-amber-500)'" onmouseout="this.style.color='var(--color-stone-400)'"
+                               aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: form -->
+                <div class="contact-form">
+                    <!-- EDITABLE: Replace YOUR_FORM_ID with your Formspree form ID (https://formspree.io)
+                     or swap the action for any other form-handling service you prefer. -->
+                <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <select id="subject">
+                                <option value="">Subject of Inquiry</option>
+                                <option value="membership">Membership Application</option>
+                                <option value="breeder">Breeder Referral</option>
+                                <option value="events">Show Information</option>
+                                <option value="health">Health Clinic Info</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Officers Section -->
+    <section class="section bg-white-60">
+        <div class="section-inner">
+            <div class="section-heading">
+                <p class="eyebrow">Club Leadership</p>
+                <h2>Our Officers</h2>
+                <p><!-- EDITABLE: Add a short sentence about your leadership team --></p>
+            </div>
+
+            <div class="cards-grid">
+                <!-- EDITABLE: Replace names/roles with real officers -->
+                <div class="card" style="text-align:center;">
+                    <div class="icon-wrap" style="margin:0 auto 1rem;">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>President</h3>
+                    <p><!-- Add name here --></p>
+                </div>
+                <div class="card" style="text-align:center;">
+                    <div class="icon-wrap" style="margin:0 auto 1rem;">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Vice President</h3>
+                    <p><!-- Add name here --></p>
+                </div>
+                <div class="card" style="text-align:center;">
+                    <div class="icon-wrap" style="margin:0 auto 1rem;">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Secretary / Treasurer</h3>
+                    <p><!-- Add name here --></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div style="background:rgba(34,197,94,.15);padding:.5rem;border-radius:50%;color:var(--color-green-500);">
+            <i class="fas fa-paw"></i>
+        </div>
+        <span>Thank you! We'll be in touch soon.</span>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <img src="logo.jpg" alt="CSCSC Logo">
+        <div class="footer-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Dog Shows"><i class="fas fa-dog"></i></a>
+        </div>
+        <p class="footer-copy">© 2024 Cocker Spaniel Club of Southern California. Founded 1930.</p>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileBtn = document.getElementById('mobile-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+
+        // Contact form submission
+        // If a real Formspree (or other) action is set on the form, the fetch below
+        // will deliver the message. Replace YOUR_FORM_ID in the action attribute first.
+        const form = document.getElementById('contact-form');
+        const toast = document.getElementById('toast');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const action = form.getAttribute('action');
+            const hasRealEndpoint = action && !action.includes('YOUR_FORM_ID');
+
+            if (hasRealEndpoint) {
+                try {
+                    const response = await fetch(action, {
+                        method: 'POST',
+                        body: new FormData(form),
+                        headers: { 'Accept': 'application/json' }
+                    });
+                    if (!response.ok) {
+                        alert('There was a problem sending your message. Please try again or email us directly at info@cscsc.org.');
+                        return;
+                    }
+                } catch (_) {
+                    alert('There was a problem sending your message. Please email us directly at info@cscsc.org.');
+                    return;
+                }
+            }
+
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 4000);
+            form.reset();
+        });
+    </script>
+</body>
+</html>

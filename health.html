@@ -1,1 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Clinics – CSCSC</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
 
+    <img src="logo.jpg" alt="" class="bg-watermark" aria-hidden="true">
+
+    <!-- Navigation -->
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-brand">
+                <img src="logo.jpg" alt="CSCSC Logo">
+                <div class="nav-brand-text">
+                    <span>CSCSC</span>
+                    <span>Since 1930</span>
+                </div>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About the Breed</a>
+                <a href="health.html" class="active">Health Clinics</a>
+                <a href="events.html">Events</a>
+                <a href="memorial.html">In Memoriam</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <button class="nav-mobile-btn" id="mobile-btn" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div class="nav-mobile-menu" id="mobile-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About the Breed</a>
+            <a href="health.html">Health Clinics</a>
+            <a href="events.html">Events</a>
+            <a href="memorial.html">In Memoriam</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header bg-health">
+        <p class="eyebrow">Commitment to Excellence</p>
+        <h1>Health &amp; Welfare Clinics</h1>
+        <p>The CSCSC facilitates professional screenings and genetic testing to ensure the Cocker Spaniel remains healthy for generations to come.</p>
+    </header>
+
+    <!-- Clinic Cards Section -->
+    <section class="section bg-health">
+        <div class="section-inner">
+            <div class="section-heading">
+                <p class="eyebrow">Screening Services</p>
+                <h2>What We Offer</h2>
+                <p>Our clinics are open to all sporting breeds. Appointments are recommended; walk-ins are accommodated as scheduling allows.</p>
+            </div>
+
+            <div class="cards-grid-2">
+                <!-- Eye Clinic -->
+                <div class="card" style="display:flex;flex-direction:column;gap:1.5rem;">
+                    <div style="display:flex;align-items:center;gap:1.5rem;">
+                        <div class="icon-wrap" style="width:5rem;height:5rem;font-size:2rem;flex-shrink:0;">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div>
+                            <h3>OFA Eye Certification</h3>
+                            <!-- EDITABLE -->
+                            <p>Conducted by board-certified veterinary ophthalmologists to screen for cataracts, glaucoma, and PRA.</p>
+                        </div>
+                    </div>
+                    <ul class="checklist">
+                        <li><i class="fas fa-check"></i> Annual screening recommended for all breeding stock</li>
+                        <li><i class="fas fa-check"></i> Results submitted directly to the OFA database</li>
+                        <li><i class="fas fa-check"></i> Open to all sporting breeds and mixed breeds</li>
+                    </ul>
+                </div>
+
+                <!-- Heart Clinic -->
+                <div class="card" style="display:flex;flex-direction:column;gap:1.5rem;">
+                    <div style="display:flex;align-items:center;gap:1.5rem;">
+                        <div class="icon-wrap" style="width:5rem;height:5rem;font-size:2rem;flex-shrink:0;">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div>
+                            <h3>Cardiology Screening</h3>
+                            <!-- EDITABLE -->
+                            <p>Auscultation and echocardiograms provided by board-certified cardiologists to verify healthy heart function.</p>
+                        </div>
+                    </div>
+                    <ul class="checklist">
+                        <li><i class="fas fa-check"></i> Advanced Doppler exams available on request</li>
+                        <li><i class="fas fa-check"></i> OFA certification paperwork included</li>
+                        <li><i class="fas fa-check"></i> Screens for dilated cardiomyopathy and valve disease</li>
+                    </ul>
+                </div>
+
+                <!-- DNA Testing -->
+                <div class="card" style="display:flex;flex-direction:column;gap:1.5rem;">
+                    <div style="display:flex;align-items:center;gap:1.5rem;">
+                        <div class="icon-wrap" style="width:5rem;height:5rem;font-size:2rem;flex-shrink:0;">
+                            <i class="fas fa-dna"></i>
+                        </div>
+                        <div>
+                            <h3>DNA &amp; Genetic Testing</h3>
+                            <!-- EDITABLE -->
+                            <p>Cheek-swab collection for comprehensive genetic panel testing including PHPT, FN, and Exercise Induced Collapse.</p>
+                        </div>
+                    </div>
+                    <ul class="checklist">
+                        <li><i class="fas fa-check"></i> Samples sent to accredited labs</li>
+                        <li><i class="fas fa-check"></i> Results within 3–4 weeks</li>
+                        <li><i class="fas fa-check"></i> Breeder counseling available</li>
+                    </ul>
+                </div>
+
+                <!-- Hip &amp; Elbow -->
+                <div class="card" style="display:flex;flex-direction:column;gap:1.5rem;">
+                    <div style="display:flex;align-items:center;gap:1.5rem;">
+                        <div class="icon-wrap" style="width:5rem;height:5rem;font-size:2rem;flex-shrink:0;">
+                            <i class="fas fa-bone"></i>
+                        </div>
+                        <div>
+                            <h3>Orthopedic Evaluations</h3>
+                            <!-- EDITABLE -->
+                            <p>Hip and elbow radiographs reviewed by board-certified radiologists under the OFA protocol.</p>
+                        </div>
+                    </div>
+                    <ul class="checklist">
+                        <li><i class="fas fa-check"></i> Preliminary readings available same day</li>
+                        <li><i class="fas fa-check"></i> Required by many top breeding programs</li>
+                        <li><i class="fas fa-check"></i> Open to all breeds 12 months and older</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Next Clinic CTA -->
+            <div class="dark-banner">
+                <div>
+                    <h4>Next Clinic: November 15, 2026</h4>
+                    <p>Download the flyer for full details, location, and scheduling information.</p>
+                    <div style="display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1rem;">
+                        <a href="K9_Health_Clinic_Nov_15_2026_one_page_REVISED (1).pdf" target="_blank" class="btn btn-amber" style="display:inline-flex;align-items:center;gap:.5rem;">
+                            <i class="fas fa-file-pdf"></i> Clinic Flyer (Page 1)
+                        </a>
+                        <a href="K9_Health_Clinic_Nov_15_2026_one_page_REVISED (2).pdf" target="_blank" class="btn btn-amber" style="display:inline-flex;align-items:center;gap:.5rem;">
+                            <i class="fas fa-file-pdf"></i> Clinic Flyer (Page 2)
+                        </a>
+                    </div>
+                </div>
+                <a href="contact.html" class="btn btn-amber">Get Notified</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section bg-white-60">
+        <div class="section-inner">
+            <div class="section-heading">
+                <p class="eyebrow">Common Questions</p>
+                <h2>Clinic FAQ</h2>
+            </div>
+
+            <div class="cards-grid-2">
+                <div class="card">
+                    <h3 style="font-size:1.1rem;margin-bottom:.5rem;">Do I need to be a club member?</h3>
+                    <!-- EDITABLE -->
+                    <p>No. Our health clinics are open to all dog owners and breeders regardless of club membership.</p>
+                </div>
+                <div class="card">
+                    <h3 style="font-size:1.1rem;margin-bottom:.5rem;">How do I make an appointment?</h3>
+                    <!-- EDITABLE -->
+                    <p>Appointments are made through our <a href="contact.html" style="color:var(--color-amber-700);font-weight:600;">contact form</a> once a clinic date is announced.</p>
+                </div>
+                <div class="card">
+                    <h3 style="font-size:1.1rem;margin-bottom:.5rem;">What should I bring?</h3>
+                    <!-- EDITABLE -->
+                    <p>Bring your dog's vaccination records, AKC registration if applicable, and payment. Accepted forms of payment will be listed in the clinic announcement.</p>
+                </div>
+                <div class="card">
+                    <h3 style="font-size:1.1rem;margin-bottom:.5rem;">Are results shared with the OFA?</h3>
+                    <!-- EDITABLE -->
+                    <p>Eye and cardiac results can be submitted directly to the OFA registry on your behalf. You may request that results remain private.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <img src="logo.jpg" alt="CSCSC Logo">
+        <div class="footer-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Dog Shows"><i class="fas fa-dog"></i></a>
+        </div>
+        <p class="footer-copy">© 2024 Cocker Spaniel Club of Southern California. Founded 1930.</p>
+    </footer>
+
+    <script>
+        const mobileBtn = document.getElementById('mobile-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+    </script>
+</body>
+</html>
